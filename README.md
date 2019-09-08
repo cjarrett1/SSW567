@@ -1,4 +1,4 @@
-[![build status of master](https://travis-ci.org/SSW567.svg?branch=master)](https://travis-ci.org/SSW567)
+[![build status of master](https://travis-ci.org/cjarret1/SSW567.svg?branch=master)](https://travis-ci.org/cjarret1/SSW567)
 
 Week 2:  Assignment 02a
 
