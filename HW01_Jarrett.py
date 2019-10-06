@@ -20,7 +20,7 @@ def classifyTriangle(a,b,c):
     
     if a_int == False or b_int == False or c_int == False:
         return 'Some or all of the values are not integers'
-    
+        
     elif a == b == c:
         return 'Equilateral triangle'
         
@@ -39,11 +39,28 @@ def rightTriangle(a,b,c):
         print('Right Triangle')
     else:
         print('Not a Right Triangle')
-        
-a,b,c = main()
-result = classifyTriangle(a,b,c)
-print(result)
-rightTriangle(a,b,c)
+
+
+
+#Catching value errors
+try:
+    #Main execution        
+    a,b,c = main()
+    if a <= 0 or b <= 0 or c <= 0:
+        print('This is not a valid triangle. Try again...')
+        a,b,c = main()
+    elif a + b <= c:
+        print('This is not a valid triangle. Try again...')
+        a,b,c = main()
+    else:    
+        result = classifyTriangle(a,b,c)   
+        print(result)
+        rightTriangle(a,b,c)  
+except ValueError:
+    print('Invalid entry. Please try again')
+    a,b,c = main()
+
+
 
      
 
